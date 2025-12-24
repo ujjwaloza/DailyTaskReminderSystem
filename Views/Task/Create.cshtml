@@ -1,0 +1,21 @@
+﻿@model TaskModel
+
+<h2>Create Task</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Task Title</label><br />
+        <input asp-for="Title" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Reminder Date & Time</label><br />
+        <input asp-for="ReminderTime" type="datetime-local" />
+    </div>
+
+    <br />
+
+    <button type="submit">Save Task</button>
+</form>

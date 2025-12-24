@@ -1,0 +1,33 @@
+﻿@model List<TaskModel>
+
+<h2>My Tasks</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Reminder</th>
+    </tr>
+
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>@task.Title</td>
+            <td>
+                @(task.IsCompleted ? "Completed" : "Pending")
+            </td>
+            <td>
+                @if (task.IsReminderActive)
+                {
+                    @task.ReminderTime
+                }
+                else
+                {
+                    <span>No reminder</span>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Task/Create">➕ Add Task</a>

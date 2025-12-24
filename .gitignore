@@ -1,0 +1,20 @@
+﻿bin/
+obj/
+.vs/
+*.user
+*.suo
+appsettings.Development.json
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# User secrets
+secrets.json
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
